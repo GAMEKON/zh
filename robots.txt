@@ -1,0 +1,12 @@
+# hexo robots.txt
+User-agent: *
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /page/
+Allow: /tags/
+Disallow: /fonts/
+
+Sitemap: https://zh.gamekon.com/atom.xml
+Sitemap: https://zh.gamekon.com/sitemap.xml
+Sitemap: https://zh.gamekon.com/baidusitemap.xml
