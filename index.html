@@ -220,6 +220,165 @@
 
 
   
+    <article id="post-Cocos-Creator-v2-Preview" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+
+    <h1 itemprop="name">
+      
+      <a class="article-title" href="/2018/06/10/Cocos-Creator-v2-Preview.html">
+        <img src="/2018/06/10/Cocos-Creator-v2-Preview/cocos_logo.jpg">
+      </a>
+      
+      <a class="article-title" href="/2018/06/10/Cocos-Creator-v2-Preview.html">
+        Cocos Creator v2.0.0 Preview 如约而至
+      </a>
+    </h1>
+ 
+
+
+        
+        <a href="/2018/06/10/Cocos-Creator-v2-Preview.html" class="archive-article-date">
+  	<time datetime="2018-06-10T02:03:04.973Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-10</time>
+</a>
+        
+          <link rel="canonical" href="https://zh.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html">
+          <meta name="robots" content="all">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="更新说明"><a class="markdownIt-Anchor" href="#更新说明"></a> <strong>更新说明</strong></h2>
+<p>为了信守承诺，我们终于在五月的最后两个小时准备好了 Cocos Creator v2.0 版本！好开心！好激动！</p>
+<p>至于更新了哪些东西。。。我只能说，由于改动过大，不知从何说起。一句话概括的话，就是在保障组件层 API 不变的情况下，我们把底层彻底重写了，从 Cocos Creator v2.0 开始，将彻底从 Cocos2d-x 的框架脱胎重生，将不再能看到旧 Cocos 的影子，比如 1.x 时代的 sgNode 已经彻底见不到了。目前大家直接使用 v2.0 会遇到不少的警告和报错，一般都是由于使用了旧的 API，我们也为这些 API 都提供了详细的报错，包含如何升级和替换使用方式，请一定留意所有的报错信息。在升级完成之后，大家第一印象能感受到的应该是 v2.0 带来的性能提升，但是其实 v2.0 中我们还准备了很多惊喜给大家。在这里要先说一句抱歉，由于技术预览版的准备时间仓促，我们暂时没有将所有的文档准备好，这些工作会在正式版发布前全部落实，到时候大家也就能真正发挥 v2.0 的潜力。</p>
+<p>最重要的是，请大家一定要备份好项目再尝鲜，不要控制不住双手。</p>
+<h2 id="版本更新"><a class="markdownIt-Anchor" href="#版本更新"></a> <strong>版本更新</strong></h2>
+<p>更新 Cocos Creator v2.0.0 Preview 4：<a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4_20180608.dmg" rel="external nofollow noopener noreferrer" target="_blank">下载 Mac 版本</a> | <a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4.7z" rel="external nofollow noopener noreferrer" target="_blank">下载 Windows 版本</a> (2018/6/8)</p>
+<ul>
+<li>[FEATURE] 新增节点 Alpha 级联</li>
+<li>[MODIF] 仅在需要时监听小游戏重力感应事件</li>
+<li>[MODIF] 将 Editbox 中平台相关代码移动到平台相关 builtin 模块中</li>
+<li>[FIX] 修复 Prefab 关闭时，恢复场景导致的报错</li>
+<li>[FIX] 修复编辑 Prefab 内部动画时，双击打开其他 Prefab 会卡死的问题</li>
+<li>[FIX] 修复 Sprite FillType 为 RADIAL 时不能编辑 FillCenter 的问题</li>
+<li>[FIX] 修复修改节点 Anchor 后，undo 撤销修改导致的显示错误</li>
+<li>[FIX] 修复 tilemap 如果包含空 layer 会报错的问题</li>
+<li>[FIX] 修复 DOM 相关组件事件监听器引起的内存泄漏问题</li>
+<li>[FIX] 修复 Mask 组件切换模式以及重新启用时导致的持续报错</li>
+<li>[FIX] 修复相邻 Mask 被错误批处理的问题</li>
+<li>[FIX] 修复 Active 状态更新后的 world transform 错误</li>
+<li>[FIX] 修复 Auto remove on finish 导致粒子节点在编辑器中消失的问题</li>
+<li>[FIX] 修复 Example 工程主界面测试按钮的显示抖动</li>
+<li>[FIX] 修复 Editbox 的显示残留问题</li>
+<li>[FIX] 修复节点下添加多个渲染组件的报错问题</li>
+<li>[FIX] 修复 BMFont Label 颜色无法设置问题</li>
+<li>[FIX] 修复 LabelOutline 透明度不受节点透明度影响问题</li>
+<li>[FIX] 修复安卓小游戏平台重力感应事件</li>
+<li>[FIX] 修复 Sprite 组件 Sliced 模式的渲染问题</li>
+<li>[FIX] 修复 Sprite 组件 Gray State 导致 gl warning 的问题</li>
+<li>[FIX] 修复编辑 Prefab 之后返回场景导致场景失效的问题</li>
+<li>[FIX] 修复 Accelerometer 事件在屏幕朝向不等同于设备朝向时的坐标轴错误</li>
+<li>[FIX] 修复节点事件的 target 和 currentTarget 问题</li>
+</ul>
+<h2 id="相关资源"><a class="markdownIt-Anchor" href="#相关资源"></a> <strong>相关资源</strong></h2>
+<p><a href="https://github.com/pandamicro/heartfelt" rel="external nofollow noopener noreferrer" target="_blank">Material 使用案例</a></p>
+<h2 id="release-notes"><a class="markdownIt-Anchor" href="#release-notes"></a> <strong>RELEASE NOTES</strong></h2>
+<p><strong>平台支持</strong><br>
+Cocos Creator v2.0.0 Preview 是一个技术预览版，目前尚不支持所有平台，以下是我们支持的平台</p>
+<p>Web（WebGL 渲染）<br>
+微信小游戏平台</p>
+<p><strong>资源升级</strong><br>
+v2.0 合并了 v1.10 的所有修改，v1.10 对底层资源类型进行了重构，大多数项目不受影响，但有些项目可能会收到一些警告，详情请查阅 <a href="http://docs.cocos.com/creator/manual/zh/release-notes/raw-asset-migration.html" rel="external nofollow noopener noreferrer" target="_blank">v1.10 资源升级指南</a>。</p>
+<p><strong>编辑器</strong><br>
+实现了 Texture 的 premultiply alpha，filter mode，wrap mode 配置<br>
+集成 Quick Compile，自定义引擎只需要使用菜单的 “开发者选项” -&gt; “编译引擎” 可在几秒内快速编译完成</p>
+<p><strong>引擎</strong><br>
+彻底移除渲染树<br>
+添加基于 3D Renderer 的新渲染器<br>
+渲染组件实现全面升级<br>
+Camera 组件升级<br>
+添加自定义渲染组件能力（尚未公开文档，正式版之前会开放）<br>
+正式增加了 RenderTexture 资源类型，可以参考 example cases 中的 “render_to_canvas” 和 “render_to_sprite” 测试用例学习如何使用 RenderTexture 完成截屏</p>
+<p><strong>REMOVED &amp; DEPRECATION</strong><br>
+v1.x 的大量私有以及非核心 API 被移除或废弃，详细内容可以参考 <a href="https://github.com/cocos-creator/engine/blob/next/cocos2d/deprecated.js" rel="external nofollow noopener noreferrer" target="_blank">deprecated.js</a></p>
+<h2 id="性能和框架"><a class="markdownIt-Anchor" href="#性能和框架"></a> <strong>性能和框架</strong></h2>
+<p><strong>性能进化</strong><br>
+从 v2.0 开始，我们建立了性能基线跟踪测试，下面是 v1.8.2（v1.x 后续版本没有性能优化）和 v2.0 的性能对比<br>
+<img src="/2018/06/10/Cocos-Creator-v2-Preview/1.jpg" alt="性能对比"></p>
+<p><strong>框架进化</strong><br>
+这里放出两张简单的 v2.0 架构图以及和 v1.x 的对比，未来会有更详细的文档献给大家<br>
+<img src="/2018/06/10/Cocos-Creator-v2-Preview/2.jpg" alt="1.x节点树"><br>
+<img src="/2018/06/10/Cocos-Creator-v2-Preview/3.jpg" alt="2.0节点树"><br>
+<img src="/2018/06/10/Cocos-Creator-v2-Preview/4.jpg" alt="2.0渲染框架"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">新闻</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Cocos Creator</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/博客/" class="article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/10/Cocos-Creator-v2-Preview.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-some-software-i-use" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -957,131 +1116,6 @@
 
 
   
-    <article id="post-lets-encrypt-ssl" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-
-    <h1 itemprop="name">
-      
-      <a class="article-title" href="/2018/04/14/lets-encrypt-ssl.html">
-        <img src="/2018/04/14/lets-encrypt-ssl/featured.jpg">
-      </a>
-      
-      <a class="article-title" href="/2018/04/14/lets-encrypt-ssl.html">
-        使用 let&#39;s encrypt 免费加密证书
-      </a>
-    </h1>
- 
-
-
-        
-        <a href="/2018/04/14/lets-encrypt-ssl.html" class="archive-article-date">
-  	<time datetime="2018-04-14T02:53:59.384Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
-</a>
-        
-          <link rel="canonical" href="https://zh.gamekon.com/2018/04/14/lets-encrypt-ssl.html">
-          <meta name="robots" content="all">
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <br>
-<h2 id="域名链证书"><a class="markdownIt-Anchor" href="#域名链证书"></a> <strong>域名链证书</strong></h2>
-<p>这是传统的域名证书。</p>
-<h3 id="获取"><a class="markdownIt-Anchor" href="#获取"></a> <strong>获取</strong></h3>
-<ol>
-<li>wget <a href="https://dl.eff.org/certbot-auto" rel="external nofollow noopener noreferrer" target="_blank">https://dl.eff.org/certbot-auto</a></li>
-<li>chmod u+x certbot-auto</li>
-<li>./certbot-auto certonly -d <em>DOMAIN</em>.com -d www.<em>DOMAIN</em>.com -d <em>OTHER</em>.<em>DOMAIN</em>.com</li>
-<li>选择3 (webroot http-01 challenge)</li>
-<li>输入邮箱地址</li>
-<li>接受许可协议和授权信息记录等</li>
-<li>输入webroot路径</li>
-<li>如果还使用其他webroot，则继续输入其他webroot路径</li>
-</ol>
-<p>顺利的话SSL证书会自动在<code>/etc/letsencrypt/</code>下生成。</p>
-<h3 id="更新"><a class="markdownIt-Anchor" href="#更新"></a> <strong>更新</strong></h3>
-<ol>
-<li>测试：cd / &amp;&amp; python -c ‘import random; import time; time.sleep(random.random() * 5)’ &amp;&amp; cd / &amp;&amp; ./root/certbot-auto renew --dry-run &amp;&amp; echo “ok”</li>
-<li>建立自动执行时间安排表
-<ul>
-<li>nano /etc/crontab</li>
-<li>0 0,12 * * * root cd / &amp;&amp; python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; cd / &amp;&amp; ./root/certbot-auto renew &amp;&amp; nginx -s reload</li>
-<li>service cron restart</li>
-</ul>
-</li>
-</ol>
-        
-          <a class="article-more-a" href="/2018/04/14/lets-encrypt-ssl.html#more">更多内容 >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">域名</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">经验</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/博客/" class="article-tag-list-link color3">博客</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/04/14/lets-encrypt-ssl.html">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -1172,6 +1206,22 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">新闻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Cocos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">免费</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">程序</a>
               </li>
              
@@ -1180,23 +1230,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cocos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">免费</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">域名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1208,19 +1250,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">云共享</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数独</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
               </li>
              
               <li class="article-tag-list-item">

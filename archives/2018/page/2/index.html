@@ -218,6 +218,131 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-lets-encrypt-ssl" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+
+    <h1 itemprop="name">
+      
+      <a class="article-title" href="/2018/04/14/lets-encrypt-ssl.html">
+        <img src="/2018/04/14/lets-encrypt-ssl/featured.jpg">
+      </a>
+      
+      <a class="article-title" href="/2018/04/14/lets-encrypt-ssl.html">
+        使用 let&#39;s encrypt 免费加密证书
+      </a>
+    </h1>
+ 
+
+
+        
+        <a href="/2018/04/14/lets-encrypt-ssl.html" class="archive-article-date">
+  	<time datetime="2018-04-14T02:53:59.384Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-14</time>
+</a>
+        
+          <link rel="canonical" href="https://zh.gamekon.com/2018/04/14/lets-encrypt-ssl.html">
+          <meta name="robots" content="all">
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <br>
+<h2 id="域名链证书"><a class="markdownIt-Anchor" href="#域名链证书"></a> <strong>域名链证书</strong></h2>
+<p>这是传统的域名证书。</p>
+<h3 id="获取"><a class="markdownIt-Anchor" href="#获取"></a> <strong>获取</strong></h3>
+<ol>
+<li>wget <a href="https://dl.eff.org/certbot-auto" rel="external nofollow noopener noreferrer" target="_blank">https://dl.eff.org/certbot-auto</a></li>
+<li>chmod u+x certbot-auto</li>
+<li>./certbot-auto certonly -d <em>DOMAIN</em>.com -d www.<em>DOMAIN</em>.com -d <em>OTHER</em>.<em>DOMAIN</em>.com</li>
+<li>选择3 (webroot http-01 challenge)</li>
+<li>输入邮箱地址</li>
+<li>接受许可协议和授权信息记录等</li>
+<li>输入webroot路径</li>
+<li>如果还使用其他webroot，则继续输入其他webroot路径</li>
+</ol>
+<p>顺利的话SSL证书会自动在<code>/etc/letsencrypt/</code>下生成。</p>
+<h3 id="更新"><a class="markdownIt-Anchor" href="#更新"></a> <strong>更新</strong></h3>
+<ol>
+<li>测试：cd / &amp;&amp; python -c ‘import random; import time; time.sleep(random.random() * 5)’ &amp;&amp; cd / &amp;&amp; ./root/certbot-auto renew --dry-run &amp;&amp; echo “ok”</li>
+<li>建立自动执行时间安排表
+<ul>
+<li>nano /etc/crontab</li>
+<li>0 0,12 * * * root cd / &amp;&amp; python -c ‘import random; import time; time.sleep(random.random() * 3600)’ &amp;&amp; cd / &amp;&amp; ./root/certbot-auto renew &amp;&amp; nginx -s reload</li>
+<li>service cron restart</li>
+</ul>
+</li>
+</ol>
+        
+          <a class="article-more-a" href="/2018/04/14/lets-encrypt-ssl.html#more">更多内容 >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">域名</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">经验</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/博客/" class="article-tag-list-link color3">博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/14/lets-encrypt-ssl.html">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-two-experiences-about-photoshop" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -911,6 +1036,22 @@
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">新闻</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Cocos Creator</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Cocos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">免费</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">程序</a>
               </li>
              
@@ -919,23 +1060,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Cocos</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">插件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">日常</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">免费</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">域名</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">日常</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -947,19 +1080,19 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">软件</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">云共享</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数独</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">软件</a>
               </li>
              
               <li class="article-tag-list-item">
