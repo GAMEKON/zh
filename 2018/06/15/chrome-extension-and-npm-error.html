@@ -6,22 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zh.gamekon.com">
-  <title>在新Photoshop中安装旧插件 | 游戏控</title>
+  <title>chrome非官方插件安装与npm茶壶报错处理 | 游戏控</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有时我们需要使用旧插件时发现最新版的Photoshop已经不支持它的安装了😞，本篇文章就来尝试在新Photoshop中安装旧插件。   比如说我有一个需要使用的插件plugin.zxp，我的Photoshop版本是 CC 2018 最新版，我无法用以前的方法安装这个plugin.zxp，该怎么办呢？ 其实zxp就是zip格式的压缩文件，用winRAR将其解压后可得到一个目录。我们把这个目录移入">
-<meta name="keywords" content="插件,Photoshop">
+  <meta name="description" content="最近工作中遇到两个小问题，一是最新版chrome安装非官方扩展程序后，会不断出现要求关闭该扩展程序的提示；二是npm安装程序突然提示“error418 I’m a teapot”错误。我经过一番实践，解决了这两个问题，顺便在此记录一下解决过程。   chrome安装非官方扩展程序  chrome://extensions/ 打开扩展程序列表，通过拖拽crx文件的方式安装扩展程序并记录程序id，c">
+<meta name="keywords" content="chrome extension,I&#39;m a teapot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在新Photoshop中安装旧插件">
-<meta property="og:url" content="https://zh.gamekon.com/2018/04/16/install-old-plugin-into-new-ps.html">
+<meta property="og:title" content="chrome非官方插件安装与npm茶壶报错处理">
+<meta property="og:url" content="https://zh.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html">
 <meta property="og:site_name" content="游戏控">
-<meta property="og:description" content="有时我们需要使用旧插件时发现最新版的Photoshop已经不支持它的安装了😞，本篇文章就来尝试在新Photoshop中安装旧插件。   比如说我有一个需要使用的插件plugin.zxp，我的Photoshop版本是 CC 2018 最新版，我无法用以前的方法安装这个plugin.zxp，该怎么办呢？ 其实zxp就是zip格式的压缩文件，用winRAR将其解压后可得到一个目录。我们把这个目录移入">
+<meta property="og:description" content="最近工作中遇到两个小问题，一是最新版chrome安装非官方扩展程序后，会不断出现要求关闭该扩展程序的提示；二是npm安装程序突然提示“error418 I’m a teapot”错误。我经过一番实践，解决了这两个问题，顺便在此记录一下解决过程。   chrome安装非官方扩展程序  chrome://extensions/ 打开扩展程序列表，通过拖拽crx文件的方式安装扩展程序并记录程序id，c">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://zh.gamekon.com/2018/04/16/install-old-plugin-into-new-ps/map.png">
-<meta property="og:updated_time" content="2018-04-18T01:54:59.183Z">
+<meta property="og:updated_time" content="2018-06-15T02:26:21.911Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在新Photoshop中安装旧插件">
-<meta name="twitter:description" content="有时我们需要使用旧插件时发现最新版的Photoshop已经不支持它的安装了😞，本篇文章就来尝试在新Photoshop中安装旧插件。   比如说我有一个需要使用的插件plugin.zxp，我的Photoshop版本是 CC 2018 最新版，我无法用以前的方法安装这个plugin.zxp，该怎么办呢？ 其实zxp就是zip格式的压缩文件，用winRAR将其解压后可得到一个目录。我们把这个目录移入">
-<meta name="twitter:image" content="https://zh.gamekon.com/2018/04/16/install-old-plugin-into-new-ps/map.png">
+<meta name="twitter:title" content="chrome非官方插件安装与npm茶壶报错处理">
+<meta name="twitter:description" content="最近工作中遇到两个小问题，一是最新版chrome安装非官方扩展程序后，会不断出现要求关闭该扩展程序的提示；二是npm安装程序突然提示“error418 I’m a teapot”错误。我经过一番实践，解决了这两个问题，顺便在此记录一下解决过程。   chrome安装非官方扩展程序  chrome://extensions/ 打开扩展程序列表，通过拖拽crx文件的方式安装扩展程序并记录程序id，c">
   
     <link rel="alternative" href="/atom.xml" title="游戏控" type="application/atom+xml">
   
@@ -219,7 +217,7 @@
             <canvas data-colors="#eaeaea" data-sectionheight="100" data-contentid="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-install-old-plugin-into-new-ps" class="article article-type-post " itemscope="" itemprop="blogPost">
+            <article id="post-chrome-extension-and-npm-error" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -227,40 +225,45 @@
 
     <h1 itemprop="name">
       
-      <a class="article-title" href="/2018/04/16/install-old-plugin-into-new-ps.html">
-        <img src="/2018/04/16/install-old-plugin-into-new-ps/featured.jpg">
+      <a class="article-title" href="/2018/06/15/chrome-extension-and-npm-error.html">
+        <img src="/2018/06/15/chrome-extension-and-npm-error/featured.png">
       </a>
       
-      <a class="article-title" href="/2018/04/16/install-old-plugin-into-new-ps.html">
-        在新Photoshop中安装旧插件
+      <a class="article-title" href="/2018/06/15/chrome-extension-and-npm-error.html">
+        chrome非官方插件安装与npm茶壶报错处理
       </a>
     </h1>
  
 
 
         
-        <a href="/2018/04/16/install-old-plugin-into-new-ps.html" class="archive-article-date">
-  	<time datetime="2018-04-16T08:22:33.814Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-16</time>
+        <a href="/2018/06/15/chrome-extension-and-npm-error.html" class="archive-article-date">
+  	<time datetime="2018-06-15T01:50:01.780Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-15</time>
 </a>
         
-          <link rel="canonical" href="https://zh.gamekon.com/2018/04/16/install-old-plugin-into-new-ps.html">
+          <link rel="canonical" href="https://zh.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html">
           <meta name="robots" content="all">
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>有时我们需要使用旧插件时发现最新版的Photoshop已经不支持它的安装了😞，本篇文章就来尝试在新Photoshop中安装旧插件。</p>
+<p>最近工作中遇到两个小问题，一是最新版chrome安装非官方扩展程序后，会不断出现要求关闭该扩展程序的提示；二是npm安装程序突然提示“error418 I’m a teapot”错误。我经过一番实践，解决了这两个问题，顺便在此记录一下解决过程。</p>
 </blockquote>
-<hr>
-<p>比如说我有一个需要使用的插件<code>plugin.zxp</code>，我的Photoshop版本是 CC 2018 最新版，我无法用以前的方法安装这个plugin.zxp，该怎么办呢？<br>
-其实zxp就是zip格式的压缩文件，用winRAR将其解压后可得到一个目录。我们把这个目录移入<code>C:\Users\%username%\AppData\Roaming\Adobe\CEP\extensions\</code>目录下即可。<br>
-如果是Mac系统，相应的路径是 <code>/Library/Application\ Support/Adobe/CEP/extensions/</code> 。</p>
-<p>但是这时还不能打开Photoshop使用插件，因为会出现“签名不被认可”错误。<br>
-解决方法是打开regedit，<code>HKEY_CURRENT_USER/Software/Adobe/</code> 下找到 <code>CSXS.7</code> 或者 <code>CSXS.8</code> 等，在它们的目录下新建字符串键 <code>PlayerDebugMode</code> 值为 <code>1</code> 。</p>
-<p>现在再打开Photoshop，就可以在扩展窗口里找到安装好的插件了。</p>
-<p>好了，让我们继续开始工作吧！😊</p>
-<p><img src="/2018/04/16/install-old-plugin-into-new-ps/map.png" alt="map"></p>
+<h2 id="chrome安装非官方扩展程序"><a class="markdownIt-Anchor" href="#chrome安装非官方扩展程序"></a> <strong>chrome安装非官方扩展程序</strong></h2>
+<ol>
+<li>chrome://extensions/ 打开扩展程序列表，通过拖拽crx文件的方式安装扩展程序并记录程序id，chrome会提示不可开启，不用管它。</li>
+<li>通过 <a href="https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip" rel="external nofollow noopener noreferrer" target="_blank">https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip</a> 下载策略文件包。</li>
+<li>复制压缩包里的windows\admx\chrome.admx 到 c:\windows\policydefinitions；复制压缩包里的windows\admx[你的语言]\chrome.adml 到 c:\windows\policydefinitions[你的语言]\chrome.adml。</li>
+<li>打开gpedit.msc本地组策略编辑器，展开 用户配置 -&gt; 管理模板 -&gt; Google -&gt; Google Chrome -&gt; 扩展程序，双击打开“配置扩展程序安装白名单”，选中“已启用”，点击“显示…”，在列表中输入刚才记下的扩展程序id值，点击确定。</li>
+<li>重启Chrome，可以看到被禁用的扩展现在已经可以启用了。</li>
+</ol>
+<h2 id="npm-error418-茶壶错误"><a class="markdownIt-Anchor" href="#npm-error418-茶壶错误"></a> <strong>npm error418 茶壶错误</strong></h2>
+<ol>
+<li>npm config list -l 检查npm设置</li>
+<li>npm config delete proxy （http_proxy,https_prxy) 清除所有代理设置</li>
+<li>npm 恢复正常</li>
+</ol>
 
       
 
@@ -303,18 +306,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/23/online-notepad.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          今天，我做了个云共享记事本
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/04/15/happy-magic-01.html" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">新游戏项目 Happy Magic</div>
+    <a href="/2018/06/10/Cocos-Creator-v2-Preview.html" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Cocos Creator v2.0.0 Preview 如约而至</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -334,6 +328,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#chrome安装非官方扩展程序"><span class="toc-number">1.</span> <span class="toc-text"> chrome安装非官方扩展程序</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#npm-error418-茶壶错误"><span class="toc-number">2.</span> <span class="toc-text"> npm error418 茶壶错误</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -344,7 +351,7 @@
   
 
   
-  <div id="SOHUCS" sid="install-old-plugin-into-new-ps"></div> 
+  <div id="SOHUCS" sid="chrome-extension-and-npm-error"></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
     window.changyan.api.config({

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://zh.gamekon.com/"/>
-  <updated>2018-06-10T02:25:34.399Z</updated>
+  <updated>2018-06-15T02:26:21.911Z</updated>
   <id>https://zh.gamekon.com/</id>
   
   <author>
@@ -17,21 +17,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Cocos Creator v2.0.0 Preview 如约而至</title>
-    <link href="https://zh.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html"/>
-    <id>https://zh.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html</id>
-    <published>2018-06-10T02:03:04.973Z</published>
-    <updated>2018-06-10T02:25:34.399Z</updated>
+    <title>chrome非官方插件安装与npm茶壶报错处理</title>
+    <link href="https://zh.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html"/>
+    <id>https://zh.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html</id>
+    <published>2018-06-15T01:50:01.780Z</published>
+    <updated>2018-06-15T02:26:21.911Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="更新说明"><a class="markdownIt-Anchor" href="#更新说明"></a> <strong>更新说明</strong></h2><p>为了信守承诺，我们终于在五月的最后两个小时准备好了 Cocos Creator v2.0 版本！好开心！好激动！</p><p>至于更新了哪些东西。。。我只能说，由于改动过大，不知从何说起。一句话概括的话，就是在保障组件层 API 不变的情况下，我们把底层彻底重写了，从 Cocos Creator v2.0 开始，将彻底从 Cocos2d-x 的框架脱胎重生，将不再能看到旧 Cocos 的影子，比如 1.x 时代的 sgNode 已经彻底见不到了。目前大家直接使用 v2.0 会遇到不少的警告和报错，一般都是由于使用了旧的 API，我们也为这些 API 都提供了详细的报错，包含如何升级和替换使用方式，请一定留意所有的报错信息。在升级完成之后，大家第一印象能感受到的应该是 v2.0 带来的性能提升，但是其实 v2.0 中我们还准备了很多惊喜给大家。在这里要先说一句抱歉，由于技术预览版的准备时间仓促，我们暂时没有将所有的文档准备好，这些工作会在正式版发布前全部落实，到时候大家也就能真正发挥 v2.0 的潜力。</p><p>最重要的是，请大家一定要备份好项目再尝鲜，不要控制不住双手。</p><h2 id="版本更新"><a class="markdownIt-Anchor" href="#版本更新"></a> <strong>版本更新</strong></h2><p>更新 Cocos Creator v2.0.0 Preview 4：<a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4_20180608.dmg" rel="external nofollow noopener noreferrer" target="_blank">下载 Mac 版本</a> | <a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4.7z" rel="external nofollow noopener noreferrer" target="_blank">下载 Windows 版本</a> (2018/6/8)</p><ul><li>[FEATURE] 新增节点 Alpha 级联</li><li>[MODIF] 仅在需要时监听小游戏重力感应事件</li><li>[MODIF] 将 Editbox 中平台相关代码移动到平台相关 builtin 模块中</li><li>[FIX] 修复 Prefab 关闭时，恢复场景导致的报错</li><li>[FIX] 修复编辑 Prefab 内部动画时，双击打开其他 Prefab 会卡死的问题</li><li>[FIX] 修复 Sprite FillType 为 RADIAL 时不能编辑 FillCenter 的问题</li><li>[FIX] 修复修改节点 Anchor 后，undo 撤销修改导致的显示错误</li><li>[FIX] 修复 tilemap 如果包含空 layer 会报错的问题</li><li>[FIX] 修复 DOM 相关组件事件监听器引起的内存泄漏问题</li><li>[FIX] 修复 Mask 组件切换模式以及重新启用时导致的持续报错</li><li>[FIX] 修复相邻 Mask 被错误批处理的问题</li><li>[FIX] 修复 Active 状态更新后的 world transform 错误</li><li>[FIX] 修复 Auto remove on finish 导致粒子节点在编辑器中消失的问题</li><li>[FIX] 修复 Example 工程主界面测试按钮的显示抖动</li><li>[FIX] 修复 Editbox 的显示残留问题</li><li>[FIX] 修复节点下添加多个渲染组件的报错问题</li><li>[FIX] 修复 BMFont Label 颜色无法设置问题</li><li>[FIX] 修复 LabelOutline 透明度不受节点透明度影响问题</li><li>[FIX] 修复安卓小游戏平台重力感应事件</li><li>[FIX] 修复 Sprite 组件 Sliced 模式的渲染问题</li><li>[FIX] 修复 Sprite 组件 Gray State 导致 gl warning 的问题</li><li>[FIX] 修复编辑 Prefab 之后返回场景导致场景失效的问题</li><li>[FIX] 修复 Accelerometer 事件在屏幕朝向不等同于设备朝向时的坐标轴错误</li><li>[FIX] 修复节点事件的 target 和 currentTarget 问题</li></ul><h2 id="相关资源"><a class="markdownIt-Anchor" href="#相关资源"></a> <strong>相关资源</strong></h2><p><a href="https://github.com/pandamicro/heartfelt" rel="external nofollow noopener noreferrer" target="_blank">Material 使用案例</a></p><h2 id="release-notes"><a class="markdownIt-Anchor" href="#release-notes"></a> <strong>RELEASE NOTES</strong></h2><p><strong>平台支持</strong><br>Cocos Creator v2.0.0 Preview 是一个技术预览版，目前尚不支持所有平台，以下是我们支持的平台</p><p>Web（WebGL 渲染）<br>微信小游戏平台</p><p><strong>资源升级</strong><br>v2.0 合并了 v1.10 的所有修改，v1.10 对底层资源类型进行了重构，大多数项目不受影响，但有些项目可能会收到一些警告，详情请查阅 <a href="http://docs.cocos.com/creator/manual/zh/release-notes/raw-asset-migration.html" rel="external nofollow noopener noreferrer" target="_blank">v1.10 资源升级指南</a>。</p><p><strong>编辑器</strong><br>实现了 Texture 的 premultiply alpha，filter mode，wrap mode 配置<br>集成 Quick Compile，自定义引擎只需要使用菜单的 “开发者选项” -&gt; “编译引擎” 可在几秒内快速编译完成</p><p><strong>引擎</strong><br>彻底移除渲染树<br>添加基于 3D Renderer 的新渲染器<br>渲染组件实现全面升级<br>Camera 组件升级<br>添加自定义渲染组件能力（尚未公开文档，正式版之前会开放）<br>正式增加了 RenderTexture 资源类型，可以参考 example cases 中的 “render_to_canvas” 和 “render_to_sprite” 测试用例学习如何使用 RenderTexture 完成截屏</p><p><strong>REMOVED &amp; DEPRECATION</strong><br>v1.x 的大量私有以及非核心 API 被移除或废弃，详细内容可以参考 <a href="https://github.com/cocos-creator/engine/blob/next/cocos2d/deprecated.js" rel="external nofollow noopener noreferrer" target="_blank">deprecated.js</a></p><h2 id="性能和框架"><a class="markdownIt-Anchor" href="#性能和框架"></a> <strong>性能和框架</strong></h2><p><strong>性能进化</strong><br>从 v2.0 开始，我们建立了性能基线跟踪测试，下面是 v1.8.2（v1.x 后续版本没有性能优化）和 v2.0 的性能对比<br><img src="/2018/06/10/Cocos-Creator-v2-Preview/1.jpg" alt="性能对比"></p><p><strong>框架进化</strong><br>这里放出两张简单的 v2.0 架构图以及和 v1.x 的对比，未来会有更详细的文档献给大家<br><img src="/2018/06/10/Cocos-Creator-v2-Preview/2.jpg" alt="1.x节点树"><br><img src="/2018/06/10/Cocos-Creator-v2-Preview/3.jpg" alt="2.0节点树"><br><img src="/2018/06/10/Cocos-Creator-v2-Preview/4.jpg" alt="2.0渲染框架"></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>最近工作中遇到两个小问题，一是最新版chrome安装非官方扩展程序后，会不断出现要求关闭该扩展程序的提示；二是npm安装程序突然提示“error418 I’m a teapot”错误。我经过一番实践，解决了这两个问题，顺便在此记录一下解决过程。</p></blockquote><h2 id="chrome安装非官方扩展程序"><a class="markdownIt-Anchor" href="#chrome安装非官方扩展程序"></a> <strong>chrome安装非官方扩展程序</strong></h2><ol><li>chrome://extensions/ 打开扩展程序列表，通过拖拽crx文件的方式安装扩展程序并记录程序id，chrome会提示不可开启，不用管它。</li><li>通过 <a href="https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip" rel="external nofollow noopener noreferrer" target="_blank">https://dl.google.com/dl/edgedl/chrome/policy/policy_templates.zip</a> 下载策略文件包。</li><li>复制压缩包里的windows\admx\chrome.admx 到 c:\windows\policydefinitions；复制压缩包里的windows\admx[你的语言]\chrome.adml 到 c:\windows\policydefinitions[你的语言]\chrome.adml。</li><li>打开gpedit.msc本地组策略编辑器，展开 用户配置 -&gt; 管理模板 -&gt; Google -&gt; Google Chrome -&gt; 扩展程序，双击打开“配置扩展程序安装白名单”，选中“已启用”，点击“显示…”，在列表中输入刚才记下的扩展程序id值，点击确定。</li><li>重启Chrome，可以看到被禁用的扩展现在已经可以启用了。</li></ol><h2 id="npm-error418-茶壶错误"><a class="markdownIt-Anchor" href="#npm-error418-茶壶错误"></a> <strong>npm error418 茶壶错误</strong></h2><ol><li>npm config list -l 检查npm设置</li><li>npm config delete proxy （http_proxy,https_prxy) 清除所有代理设置</li><li>npm 恢复正常</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h2 id=&quot;更新说明&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#更新说明&quot;&gt;&lt;/a&gt; &lt;strong&gt;更新说明&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;为了信守承诺，我们终于在五月的最后两个小时准备好了 Cocos Creator v2.0 版本！好
+        &lt;blockquote&gt;
+&lt;p&gt;最近工作中遇到两个小问题，一是最新版chrome安装非官方扩展程序后，会不断出现要求关闭该扩展程序的提示；二是npm安装程序突然提示“error418 I’m a teapot”错误。我经过一番实践，解决了这两个问题，顺便在此记录一下解决过程。&lt;/
       
+    
+    </summary>
+    
+      <category term="博客" scheme="https://zh.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="经验" scheme="https://zh.gamekon.com/tags/%E7%BB%8F%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cocos Creator v2.0.0 Preview 如约而至</title>
+    <link href="https://zh.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html"/>
+    <id>https://zh.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html</id>
+    <published>2018-06-10T02:03:04.973Z</published>
+    <updated>2018-06-15T02:06:47.529Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="更新说明"><a class="markdownIt-Anchor" href="#更新说明"></a> <strong>更新说明</strong></h2><p>为了信守承诺，我们终于在五月的最后两个小时准备好了 Cocos Creator v2.0 版本！好开心！好激动！</p><p>至于更新了哪些东西。。。我只能说，由于改动过大，不知从何说起。一句话概括的话，就是在保障组件层 API 不变的情况下，我们把底层彻底重写了，从 Cocos Creator v2.0 开始，将彻底从 Cocos2d-x 的框架脱胎重生，将不再能看到旧 Cocos 的影子，比如 1.x 时代的 sgNode 已经彻底见不到了。目前大家直接使用 v2.0 会遇到不少的警告和报错，一般都是由于使用了旧的 API，我们也为这些 API 都提供了详细的报错，包含如何升级和替换使用方式，请一定留意所有的报错信息。在升级完成之后，大家第一印象能感受到的应该是 v2.0 带来的性能提升，但是其实 v2.0 中我们还准备了很多惊喜给大家。在这里要先说一句抱歉，由于技术预览版的准备时间仓促，我们暂时没有将所有的文档准备好，这些工作会在正式版发布前全部落实，到时候大家也就能真正发挥 v2.0 的潜力。</p><p>最重要的是，请大家一定要备份好项目再尝鲜，不要控制不住双手。</p><a id="more"></a><h2 id="版本更新"><a class="markdownIt-Anchor" href="#版本更新"></a> <strong>版本更新</strong></h2><p>更新 Cocos Creator v2.0.0 Preview 4：<a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4_20180608.dmg" rel="external nofollow noopener noreferrer" target="_blank">下载 Mac 版本</a> | <a href="http://download.cocos.com/CocosCreator/beta/CocosCreator_v2.0.0-preview.4.7z" rel="external nofollow noopener noreferrer" target="_blank">下载 Windows 版本</a> (2018/6/8)</p><ul><li>[FEATURE] 新增节点 Alpha 级联</li><li>[MODIF] 仅在需要时监听小游戏重力感应事件</li><li>[MODIF] 将 Editbox 中平台相关代码移动到平台相关 builtin 模块中</li><li>[FIX] 修复 Prefab 关闭时，恢复场景导致的报错</li><li>[FIX] 修复编辑 Prefab 内部动画时，双击打开其他 Prefab 会卡死的问题</li><li>[FIX] 修复 Sprite FillType 为 RADIAL 时不能编辑 FillCenter 的问题</li><li>[FIX] 修复修改节点 Anchor 后，undo 撤销修改导致的显示错误</li><li>[FIX] 修复 tilemap 如果包含空 layer 会报错的问题</li><li>[FIX] 修复 DOM 相关组件事件监听器引起的内存泄漏问题</li><li>[FIX] 修复 Mask 组件切换模式以及重新启用时导致的持续报错</li><li>[FIX] 修复相邻 Mask 被错误批处理的问题</li><li>[FIX] 修复 Active 状态更新后的 world transform 错误</li><li>[FIX] 修复 Auto remove on finish 导致粒子节点在编辑器中消失的问题</li><li>[FIX] 修复 Example 工程主界面测试按钮的显示抖动</li><li>[FIX] 修复 Editbox 的显示残留问题</li><li>[FIX] 修复节点下添加多个渲染组件的报错问题</li><li>[FIX] 修复 BMFont Label 颜色无法设置问题</li><li>[FIX] 修复 LabelOutline 透明度不受节点透明度影响问题</li><li>[FIX] 修复安卓小游戏平台重力感应事件</li><li>[FIX] 修复 Sprite 组件 Sliced 模式的渲染问题</li><li>[FIX] 修复 Sprite 组件 Gray State 导致 gl warning 的问题</li><li>[FIX] 修复编辑 Prefab 之后返回场景导致场景失效的问题</li><li>[FIX] 修复 Accelerometer 事件在屏幕朝向不等同于设备朝向时的坐标轴错误</li><li>[FIX] 修复节点事件的 target 和 currentTarget 问题</li></ul><h2 id="相关资源"><a class="markdownIt-Anchor" href="#相关资源"></a> <strong>相关资源</strong></h2><p><a href="https://github.com/pandamicro/heartfelt" rel="external nofollow noopener noreferrer" target="_blank">Material 使用案例</a></p><h2 id="release-notes"><a class="markdownIt-Anchor" href="#release-notes"></a> <strong>RELEASE NOTES</strong></h2><p><strong>平台支持</strong><br>Cocos Creator v2.0.0 Preview 是一个技术预览版，目前尚不支持所有平台，以下是我们支持的平台</p><p>Web（WebGL 渲染）<br>微信小游戏平台</p><p><strong>资源升级</strong><br>v2.0 合并了 v1.10 的所有修改，v1.10 对底层资源类型进行了重构，大多数项目不受影响，但有些项目可能会收到一些警告，详情请查阅 <a href="http://docs.cocos.com/creator/manual/zh/release-notes/raw-asset-migration.html" rel="external nofollow noopener noreferrer" target="_blank">v1.10 资源升级指南</a>。</p><p><strong>编辑器</strong><br>实现了 Texture 的 premultiply alpha，filter mode，wrap mode 配置<br>集成 Quick Compile，自定义引擎只需要使用菜单的 “开发者选项” -&gt; “编译引擎” 可在几秒内快速编译完成</p><p><strong>引擎</strong><br>彻底移除渲染树<br>添加基于 3D Renderer 的新渲染器<br>渲染组件实现全面升级<br>Camera 组件升级<br>添加自定义渲染组件能力（尚未公开文档，正式版之前会开放）<br>正式增加了 RenderTexture 资源类型，可以参考 example cases 中的 “render_to_canvas” 和 “render_to_sprite” 测试用例学习如何使用 RenderTexture 完成截屏</p><p><strong>REMOVED &amp; DEPRECATION</strong><br>v1.x 的大量私有以及非核心 API 被移除或废弃，详细内容可以参考 <a href="https://github.com/cocos-creator/engine/blob/next/cocos2d/deprecated.js" rel="external nofollow noopener noreferrer" target="_blank">deprecated.js</a></p><h2 id="性能和框架"><a class="markdownIt-Anchor" href="#性能和框架"></a> <strong>性能和框架</strong></h2><p><strong>性能进化</strong><br>从 v2.0 开始，我们建立了性能基线跟踪测试，下面是 v1.8.2（v1.x 后续版本没有性能优化）和 v2.0 的性能对比<br><img src="/2018/06/10/Cocos-Creator-v2-Preview/1.jpg" alt="性能对比"></p><p><strong>框架进化</strong><br>这里放出两张简单的 v2.0 架构图以及和 v1.x 的对比，未来会有更详细的文档献给大家<br><img src="/2018/06/10/Cocos-Creator-v2-Preview/2.jpg" alt="1.x节点树"><br><img src="/2018/06/10/Cocos-Creator-v2-Preview/3.jpg" alt="2.0节点树"><br><img src="/2018/06/10/Cocos-Creator-v2-Preview/4.jpg" alt="2.0渲染框架"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;更新说明&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#更新说明&quot;&gt;&lt;/a&gt; &lt;strong&gt;更新说明&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;为了信守承诺，我们终于在五月的最后两个小时准备好了 Cocos Creator v2.0 版本！好开心！好激动！&lt;/p&gt;
+&lt;p&gt;至于更新了哪些东西。。。我只能说，由于改动过大，不知从何说起。一句话概括的话，就是在保障组件层 API 不变的情况下，我们把底层彻底重写了，从 Cocos Creator v2.0 开始，将彻底从 Cocos2d-x 的框架脱胎重生，将不再能看到旧 Cocos 的影子，比如 1.x 时代的 sgNode 已经彻底见不到了。目前大家直接使用 v2.0 会遇到不少的警告和报错，一般都是由于使用了旧的 API，我们也为这些 API 都提供了详细的报错，包含如何升级和替换使用方式，请一定留意所有的报错信息。在升级完成之后，大家第一印象能感受到的应该是 v2.0 带来的性能提升，但是其实 v2.0 中我们还准备了很多惊喜给大家。在这里要先说一句抱歉，由于技术预览版的准备时间仓促，我们暂时没有将所有的文档准备好，这些工作会在正式版发布前全部落实，到时候大家也就能真正发挥 v2.0 的潜力。&lt;/p&gt;
+&lt;p&gt;最重要的是，请大家一定要备份好项目再尝鲜，不要控制不住双手。&lt;/p&gt;
     
     </summary>
     
@@ -303,9 +328,9 @@
       <category term="博客" scheme="https://zh.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
-      <category term="域名" scheme="https://zh.gamekon.com/tags/%E5%9F%9F%E5%90%8D/"/>
-    
       <category term="经验" scheme="https://zh.gamekon.com/tags/%E7%BB%8F%E9%AA%8C/"/>
+    
+      <category term="域名" scheme="https://zh.gamekon.com/tags/%E5%9F%9F%E5%90%8D/"/>
     
   </entry>
   

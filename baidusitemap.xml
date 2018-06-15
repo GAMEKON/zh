@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://zh.gamekon.com/2018/06/15/chrome-extension-and-npm-error.html</loc>
+    <lastmod>2018-06-15T02:26:21.911Z</lastmod>
+    <data>
+        <display>
+        <title>chrome非官方插件安装与npm茶壶报错处理</title>
+        <pubTime>2018-06-15T01:50:01.780Z</pubTime>
+        
+        <tag>经验</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客" url="https://zh.gamekon.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://zh.gamekon.com/2018/06/10/Cocos-Creator-v2-Preview.html</loc>
-    <lastmod>2018-06-10T02:25:34.399Z</lastmod>
+    <lastmod>2018-06-15T02:06:47.529Z</lastmod>
     <data>
         <display>
         <title>Cocos Creator v2.0.0 Preview 如约而至</title>
@@ -162,9 +182,9 @@
         <title>使用 let's encrypt 免费加密证书</title>
         <pubTime>2018-04-14T02:53:59.384Z</pubTime>
         
-        <tag>域名</tag>
-         
         <tag>经验</tag>
+         
+        <tag>域名</tag>
          
          
            
